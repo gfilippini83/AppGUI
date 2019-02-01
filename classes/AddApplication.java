@@ -6,7 +6,7 @@ import java.nio.charset.*;
 public class AddApplication {
 
   public AddApplication(String newName, String newPath) {
-    
+
     addToPanel(newName);
     addActionListener(newName);
     addButtonName(newName);
@@ -31,7 +31,7 @@ public class AddApplication {
 
   public void addImage(String newName){
     try {
-      Path path = Paths.get("DesktopGUI.java");
+      Path path = Paths.get("AppGUI.java");
       List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
       int position = 75;
       String imageLine = "      Image " + newName.substring(0,3) +"Image = getScaledImage(ImageIO.read(new File(\"../images/" + newName + "_image.png\")), 20, 20);";
@@ -44,7 +44,7 @@ public class AddApplication {
 
   public void addImageIcon(String newName) {
     try {
-      Path path = Paths.get("DesktopGUI.java");
+      Path path = Paths.get("AppGUI.java");
       List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
       int position = 75;
       String imageIconLine = "      ImageIcon " + newName + "Image = new ImageIcon(" + newName.substring(0,3) + "Image);";
@@ -57,7 +57,7 @@ public class AddApplication {
 
   public void addButtonName(String newName) {
     try {
-      Path path = Paths.get("DesktopGUI.java");
+      Path path = Paths.get("AppGUI.java");
       List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
       int position = 75;
       String buttonNameLine = "      JButton " + newName + "= new JButton(\"" + newName.substring(0,1).toUpperCase() + newName.substring(1) + "\", " + newName + "Image);";
@@ -70,7 +70,7 @@ public class AddApplication {
 
   public void addActionListener(String newName) {
     try {
-      Path path = Paths.get("DesktopGUI.java");
+      Path path = Paths.get("AppGUI.java");
       List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
       int position = 75;
       String actionListenerLine = "      " + newName + ".addActionListener(new ActionListener() {\n        @Override public void actionPerformed(ActionEvent e) {\n          cmap.launchCommand(cmap.getCommand(\"" + newName + "\"));\n        }\n      });";
@@ -83,7 +83,7 @@ public class AddApplication {
 
   public void addToPanel(String newName) {
     try {
-      Path path = Paths.get("DesktopGUI.java");
+      Path path = Paths.get("AppGUI.java");
       List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
       int position = 75;
       String panelLine = "      panel.add("+ newName + ");";

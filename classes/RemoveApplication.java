@@ -6,8 +6,8 @@ class RemoveApplication {
   public static void delete_application(String app_name) {
 
     try {
-      File inputFile = new File("C:\\Users\\Garrett\\Desktop\\desktopGUICopy\\classes\\DesktopGUI.java");
-      File tempFile = new File("C:\\Users\\Garrett\\Desktop\\desktopGUICopy\\classes\\TempDesktopGUI.java");
+      File inputFile = new File("C:\\Users\\Garrett\\Desktop\\AppGUI\\classes\\AppGUI.java");
+      File tempFile = new File("C:\\Users\\Garrett\\Desktop\\AppGUI\\classes\\TempAppGUI.java");
 
       BufferedReader reader = new BufferedReader(new FileReader(inputFile));
       BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -35,7 +35,7 @@ class RemoveApplication {
       writer.close();
       reader.close();
       inputFile.delete();
-      File trueName = new File("DesktopGUI.java");
+      File trueName = new File("AppGUI.java");
       boolean successful = tempFile.renameTo(trueName);
       System.out.println(successful);
     } catch (Exception e) {
@@ -45,8 +45,8 @@ class RemoveApplication {
 
   public static void delete_command_map(String app_name) {
     try{
-      File inputFile = new File("C:\\Users\\Garrett\\Desktop\\desktopGUICopy\\classes\\CommandMap.java");
-      File tempFile = new File("C:\\Users\\Garrett\\Desktop\\desktopGUICopy\\classes\\TempCommandMap.java");
+      File inputFile = new File("C:\\Users\\Garrett\\Desktop\\AppGUI\\classes\\CommandMap.java");
+      File tempFile = new File("C:\\Users\\Garrett\\Desktop\\AppGUI\\classes\\TempCommandMap.java");
 
       BufferedReader reader = new BufferedReader(new FileReader(inputFile));
       BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
