@@ -10,7 +10,6 @@ class CommandMap {
 		commands = new HashMap<String, File>();
 		commands.put("pokerstars", new File("D:\\Full Tilt\\PokerStarsUpdate.exe"));
     commands.put("spotify", new File("C:\\Users\\Garrett\\Documents\\Spotify.lnk"));
-    commands.put("spotify", new File("C:\\Users\\Garrett\\Documents\\Spotify.lnk"));
 		commands.put("atom", new File("C:\\Users\\Garrett\\AppData\\Local\\atom\\atom.exe"));
 		commands.put("fortnite", new File("C:\\Users\\Garrett\\Documents\\Fortnite"));
 		commands.put("chrome", new File("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"));

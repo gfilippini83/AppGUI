@@ -3,7 +3,12 @@ import java.io.*;
 
 class RemoveApplication {
 
-  public static void delete_application(String app_name) {
+  public RemoveApplication(String app_name) {
+    delete_app_gui(app_name);
+    delete_command_map(app_name);
+  }
+
+  public void delete_app_gui(String app_name) {
 
     try {
       File inputFile = new File("C:\\Users\\Garrett\\Desktop\\AppGUI\\classes\\AppGUI.java");
@@ -43,7 +48,7 @@ class RemoveApplication {
     }
   }
 
-  public static void delete_command_map(String app_name) {
+  public void delete_command_map(String app_name) {
     try{
       File inputFile = new File("C:\\Users\\Garrett\\Desktop\\AppGUI\\classes\\CommandMap.java");
       File tempFile = new File("C:\\Users\\Garrett\\Desktop\\AppGUI\\classes\\TempCommandMap.java");
@@ -74,7 +79,6 @@ class RemoveApplication {
     Scanner scan = new Scanner(System.in);
     System.out.println("What application would you like to delete?");
     String app_name = scan.next();
-    delete_application(app_name);
-    delete_command_map(app_name);
+    RemoveApplication ra = new RemoveApplication(app_name);
   }
 }
